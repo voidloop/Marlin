@@ -415,7 +415,7 @@
 #define ENCODER_100X_STEPS_PER_SEC 160  // If the encoder steps per sec exceeds this value, multiply steps moved x100 to really quickly advance the value
 
 #define CHDK 66        //Pin for triggering CHDK to take a picture see how to use it here http://captain-slow.dk/2014/03/09/3d-printing-timelapses/
-#define CHDK_DELAY 3000 //How long in ms the pin should stay HIGH before going LOW again
+#define CHDK_DELAY 100 //How long in ms the pin should stay HIGH before going LOW again
 
 // @section lcd
 
