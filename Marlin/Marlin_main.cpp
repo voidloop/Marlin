@@ -6707,7 +6707,7 @@ inline void gcode_M226() {
   inline void gcode_M240() {
     #ifdef CHDK
 
-      OUT_WRITE(CHDK, HIGH);
+      WRITE(CHDK, HIGH);
       chdkHigh = millis();
       chdkActive = true;
 
@@ -10651,6 +10651,10 @@ void setup() {
 
   #if HAS_PHOTOGRAPH
     OUT_WRITE(PHOTOGRAPH_PIN, LOW);
+  #endif
+
+  #ifdef CHDK
+    OUT_WRITE(CHDK, LOW);
   #endif
 
   #if HAS_CASE_LIGHT
